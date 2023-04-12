@@ -1,3 +1,0 @@
-- 1-ex
--- select customers.custfirstname, orders.orderdate from orders, customers
---  where orders.customerid=customers.customerid order by custfirstname, orderdate
