@@ -31,12 +31,19 @@ SET search_path = my_schema, "$user", salesordersexample;
 --5-ex
 --SET search_path = my_schema, "$user", recipesexample;
 --
---select distinct r.recipetitle from recipes r
---inner join recipe_ingredients ri
---on r.recipeid=ri.recipeid
---inner join ingredients i_n
---on ri.ingredientid=i_n.ingredientid
---where i_n.ingredientname='Beef' or i_n.ingredientname='Garlic'
+---(select distinct r.recipetitle from recipes r
+-- inner join recipe_ingredients ri
+-- on r.recipeid=ri.recipeid
+-- inner join ingredients i_n
+-- on ri.ingredientid=i_n.ingredientid
+-- where i_n.ingredientname='Garlic')
+-- intersect
+-- (select distinct r.recipetitle from recipes r
+-- inner join recipe_ingredients ri
+-- on r.recipeid=ri.recipeid
+-- inner join ingredients i_n
+-- on ri.ingredientid=i_n.ingredientid
+-- where i_n.ingredientname='Beef' )
 
 --6-ex
 --select distinct r.recipetitle from recipes r
