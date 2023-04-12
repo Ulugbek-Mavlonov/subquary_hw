@@ -1,0 +1,5 @@
+-select cu.custlastname from customers cu
+--where cu.customerid in (select o.customerid from orders o
+--where o.ordernumber in(select od.ordernumber from order_details od
+--where od.productnumber in (select pr.productnumber from products pr
+--where productname ilike '%bike')))
